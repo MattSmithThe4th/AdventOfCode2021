@@ -6,9 +6,8 @@ namespace AdventOfCode {
         static void Main(string[] args) {
             Console.WriteLine("Hello World!");
 
-            Program12 prog = new Program12();
 
-            Console.WriteLine("Result: " + prog.Run());
+            Console.WriteLine("Result: " + new Program22().Run());
 
             
         }

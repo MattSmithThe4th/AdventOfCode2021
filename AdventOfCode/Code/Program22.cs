@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AdventOfCode.Code {
-    class Program21 {
-
+    class Program22 {
         public int Run() {
             string[] arr = System.IO.File.ReadAllLines(@"C:\Users\Matt Smith\source\repos\AdventOfCode\AdventOfCode\txt\Day21.txt");
             int hpos = 0;
             int vpos = 0;
+            int aim = 0;
             string[] tmp;
 
             foreach(string line in arr) {
@@ -21,14 +21,16 @@ namespace AdventOfCode.Code {
 
                     case "forward":
                         hpos += Convert.ToInt32(tmp[1]);
+
+                        vpos += Convert.ToInt32(tmp[1]) * aim;
                         break;
 
                     case "down":
-                        vpos += Convert.ToInt32(tmp[1]);
+                        aim += Convert.ToInt32(tmp[1]);
                         break;
 
                     case "up":
-                        vpos -= Convert.ToInt32(tmp[1]);
+                        aim -= Convert.ToInt32(tmp[1]);
                         break;
 
 
@@ -42,6 +44,5 @@ namespace AdventOfCode.Code {
 
             return hpos * vpos;
         }
-
     }
 }
