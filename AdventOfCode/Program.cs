@@ -7,7 +7,7 @@ namespace AdventOfCode {
             Console.WriteLine("Hello World!");
 
 
-            Console.WriteLine("Result: " + new Program32().Run());
+            Console.WriteLine("Result: " + new Program41().Run());
 
             
         }
